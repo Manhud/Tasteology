@@ -1,36 +1,183 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Technical Test
 
-## Getting Started
+This project is an implementation of a frontend technical test that demonstrates the creation of interactive and responsive components following modern web development best practices.
 
-First, run the development server:
+## 🛠 Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Next.js 14
+
+- **Why?**
+  - Provides server-side rendering (SSR) for better SEO
+  - File-system based routing
+  - Automatic image optimization
+  - Excellent TypeScript support
+  - Hot reloading for rapid development
+
+### TypeScript
+
+- **Why?**
+  - Provides static typing to prevent errors during development
+  - Better code documentation through interfaces and types
+  - Enhanced development experience with autocompletion
+  - Facilitates long-term code maintenance
+  - Improves team collaboration with clear type definitions
+
+### Tailwind CSS
+
+- **Why?**
+  - Utility-first approach that speeds up development
+  - Excellent responsive design support
+  - No need to switch between files for styling
+  - Automatic production optimization
+  - Easy customization and maintenance
+  - Built-in responsive design utilities
+
+### React Portal (for Modal)
+
+- **Why?**
+  - Better z-index and overlay management
+  - Avoids context issues with overflow and positioning
+  - Improved accessibility for modal elements
+  - Clean DOM hierarchy
+
+## 📱 Implemented Features
+
+1. **Responsive Design**
+
+   - Mobile, tablet, and desktop breakpoints
+   - Optimized images for different screen sizes
+   - Fluid layout using CSS Grid and Flexbox
+   - Mobile-first approach
+
+2. **Interactivity**
+
+   - Smooth hover and click animations
+   - Modal for image visualization
+   - Fluid state transitions
+   - Click tracking for analytics
+
+3. **Accessibility**
+
+   - Semantic HTML structure
+   - Image alt attributes
+   - Proper modal focus management
+   - ARIA attributes where needed
+
+4. **Performance**
+   - Automatic image optimization with Next.js
+   - Automatic code splitting
+   - Image lazy loading
+   - Optimized bundle size
+
+## 🚀 Architecture Decisions
+
+### Component Structure
+
+```
+src/
+├── components/
+│   ├── ui/          # Reusable UI components
+│   ├── hero-block/  # Main hero component
+│   └── card-block/  # Cards component
+├── lib/
+│   └── utils.ts     # Shared utilities
+└── types/
+    └── index.ts     # Type definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Design Patterns
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Client Components**: Used specifically for interactivity (Modal, clicks)
+- **Server Components**: For static rendering when possible
+- **Compound Components**: For better organization and reuse
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Potential Improvements
 
-## Learn More
+1. **Testing**
 
-To learn more about Next.js, take a look at the following resources:
+   - Implement unit tests with Jest
+   - Integration tests with Testing Library
+   - E2E testing with Cypress
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Performance**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   - Implement component lazy loading
+   - Further image optimization
+   - Add service workers for offline support
 
-## Deploy on Vercel
+3. **Accessibility**
+   - Add more ARIA roles
+   - Improve keyboard handling
+   - Implement high contrast themes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 How to Run the Project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Install dependencies
+npm install
+
+# Run in development
+npm run dev
+
+# Build for production
+npm run build
+
+# Run in production
+npm start
+```
+
+## 🤝 Contributing
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 Additional Notes
+
+- Project follows Next.js 14 best practices
+- Implemented a scalable design system
+- Prioritized user experience and accessibility
+- Mobile-first responsive design approach
+- Modular and maintainable code structure
+
+## 📝 Commit Guidelines
+
+We follow [Conventional Commits](https://www.conventionalcommits.org/) specification for commit messages. This leads to more readable messages that are easy to follow when looking through the project history.
+
+### Commit Message Format
+
+Each commit message consists of a **type**, a **scope** and a **subject**:
+
+```
+<type>(<scope>): <subject>
+```
+
+#### Types
+
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, etc)
+- `refactor`: Code refactoring
+- `perf`: Performance improvements
+- `test`: Adding or modifying tests
+- `chore`: Maintenance tasks
+- `ci`: CI/CD changes
+
+#### Examples:
+
+```bash
+feat(hero): add animation to hero section
+fix(modal): resolve modal closing issue
+docs(readme): update installation instructions
+style(components): format with prettier
+refactor(utils): simplify click handler
+test(modal): add unit tests for modal component
+```
+
+### Tools Used
+
+- **Commitlint**: Checks if your commit messages meet the conventional commit format
+- **Husky**: Git hooks to enforce commit message format
