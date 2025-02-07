@@ -17,8 +17,8 @@ export function HeroBlock() {
   };
 
   return (
-    <section className="w-full mb-[120px]">
-      <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 max-w-[1146px] mx-auto">
+    <section className="mb-[120px] w-[1146px] mx-auto">
+      <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2">
         <div className="grid grid-cols-1 gap-[10px] md:grid-cols-2 xl:w-[754px]">
           <div className="relative overflow-hidden md:row-span-2 h-[600px] ">
             <Image
