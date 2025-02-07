@@ -17,10 +17,10 @@ export function HeroBlock() {
   };
 
   return (
-    <section className="mb-[120px] w-[1146px] mx-auto">
-      <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2">
-        <div className="grid grid-cols-1 gap-[10px] md:grid-cols-2 xl:w-[754px]">
-          <div className="relative overflow-hidden md:row-span-2 h-[600px] ">
+    <section className="mb-[120px] w-full max-w-[1146px] mx-auto px-4 md:px-0">
+      <div className="grid grid-cols-1 gap-[30px] lg:grid-cols-[minmax(auto,754px)_minmax(auto,362px)]">
+        <div className="grid grid-cols-1 gap-[10px] sm:grid-cols-2 w-full">
+          <div className="relative overflow-hidden h-[300px] sm:h-[400px] lg:h-[600px] sm:col-span-2 lg:col-span-1 lg:row-span-2">
             <Image
               src="/images/hero/cooking-pot.jpg"
               alt="Cooking pot over fire"
@@ -31,7 +31,7 @@ export function HeroBlock() {
               }
             />
           </div>
-          <div className="relative overflow-hidden h-[295px] ">
+          <div className="relative overflow-hidden h-[150px] sm:h-[245px] lg:h-[295px]">
             <Image
               src="/images/hero/chef-preparing.jpg"
               alt="Chef preparing ingredients"
@@ -42,7 +42,7 @@ export function HeroBlock() {
               }
             />
           </div>
-          <div className="relative overflow-hidden h-[295px] ">
+          <div className="relative overflow-hidden h-[150px] sm:h-[245px] lg:h-[295px]">
             <Image
               src="/images/hero/eggs-preparation.jpg"
               alt="Perfect eggs preparation"
@@ -55,7 +55,7 @@ export function HeroBlock() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between w-[362px] ml-auto">
+        <div className="flex flex-col justify-between w-full">
           <div>
             <h1 className="text-3xl font-light leading-[33px]">
               WHAT DOES COOKING MEAN?
@@ -72,11 +72,11 @@ export function HeroBlock() {
             </p>
           </div>
 
-          <div>
+          <div className="mt-[30px]">
             <h3 className="mb-2 text-[15px] font-bold uppercase text-red">
               THE PERFECT EGG
             </h3>
-            <p className=" text-[21px] font-bold text-white leading-[30px]">
+            <p className="text-[21px] font-bold text-white leading-[30px]">
               Keep water between 67 and 68°C for a flavourful, tender yolk
             </p>
           </div>
