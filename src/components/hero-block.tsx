@@ -23,8 +23,9 @@ export function HeroBlock() {
           <div className="relative overflow-hidden h-[300px] sm:h-[400px] lg:h-[600px] sm:col-span-2 lg:col-span-1 lg:row-span-2">
             <Image
               src="/images/hero/cooking-pot.jpg"
-              alt="Cooking pot over fire"
+              alt="Professional cooking pot with precise temperature control for molecular gastronomy"
               fill
+              priority
               className="cursor-pointer object-cover"
               onClick={(e) =>
                 handleImageClick("/images/hero/cooking-pot.jpg", e)
