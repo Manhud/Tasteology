@@ -48,40 +48,35 @@ export function CardBlock() {
   };
 
   return (
-    <section className="pt-[120px] w-[1146px] mx-auto">
-      <div className="container">
-        <div className="w-fit mx-auto">
-          <h2 className="text-center text-3xl font-light md:text-4xl">
-            TASTE THE COLOURS
-          </h2>
-          <hr className="border-t border-white my-[30px]" />
-        </div>
-        <div className="grid gap-[10px] md:grid-cols-2 lg:grid-cols-3">
-          {cards.map((card) => (
-            <article
-              key={card.id}
-              className="group overflow-hidden transition-transform hover:scale-[1.02]"
-            >
-              <div className="relative h-[300px]">
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  fill
-                  className="cursor-pointer transition-transform group-hover:scale-100"
-                  onClick={(e) => handleImageClick(card.image, e)}
-                />
-              </div>
-              <div className="p-[30px] text-center">
-                <h3 className="mb-[10px] text-[21px] font-bold ">
-                  {card.title}
-                </h3>
-                <p className="text-[21px] text-white font-light leading-[30px]">
-                  {card.description}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
+    <section className="w-full max-w-[1146px] mx-auto px-4 md:px-0">
+      <div className="w-fit mx-auto mb-[60px]">
+        <h2 className="text-center text-3xl font-light">TASTE THE COLOURS</h2>
+        <hr className="border-t border-white my-[30px]" />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px]">
+        {cards.map((card) => (
+          <article
+            key={card.id}
+            className="group overflow-hidden transition-transform hover:scale-[1.02]"
+          >
+            <div className="relative overflow-hidden h-[400px] lg:h-[300px]">
+              <Image
+                src={card.image}
+                alt={card.title}
+                fill
+                className="cursor-pointer object-cover transition-transform group-hover:scale-100"
+                onClick={(e) => handleImageClick(card.image, e)}
+              />
+            </div>
+            <div className="p-[30px] text-center">
+              <h3 className="mb-[10px] text-[21px] font-bold">{card.title}</h3>
+              <p className="text-[21px] text-white font-light leading-[30px]">
+                {card.description}
+              </p>
+            </div>
+          </article>
+        ))}
       </div>
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
