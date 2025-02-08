@@ -1,9 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
-import { Modal } from "./ui/modal";
+
+import Image from "next/image";
+
 import { logClick } from "@/lib/utils";
+
+import { Modal } from "./ui/modal";
+
 
 interface Card {
   id: number;
@@ -62,11 +66,11 @@ export function CardBlock() {
           >
             <div className="relative overflow-hidden h-[400px] lg:h-[300px]">
               <Image
-                src={card.image}
-                alt={card.title}
                 fill
-                loading="lazy"
+                alt={card.title}
                 className="cursor-pointer object-cover transition-transform group-hover:scale-100"
+                loading="lazy"
+                src={card.image}
                 onClick={(e) => handleImageClick(card.image, e)}
               />
             </div>
@@ -82,11 +86,11 @@ export function CardBlock() {
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <Image
-          src={selectedImage}
           alt="Enlarged view"
-          width={1200}
-          height={800}
           className="max-h-[80vh] w-auto rounded-lg"
+          height={800}
+          src={selectedImage}
+          width={1200}
         />
       </Modal>
     </section>

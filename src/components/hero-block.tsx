@@ -1,9 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
-import { Modal } from "./ui/modal";
+
+import Image from "next/image";
+
 import { logClick } from "@/lib/utils";
+
+import { Modal } from "./ui/modal";
+
 
 export function HeroBlock() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,11 +26,11 @@ export function HeroBlock() {
         <div className="grid grid-cols-1 gap-[10px] sm:grid-cols-2 w-full">
           <div className="relative overflow-hidden h-[300px] sm:h-[400px] lg:h-[600px] sm:col-span-2 lg:col-span-1 lg:row-span-2">
             <Image
-              src="/images/hero/cooking-pot.jpg"
-              alt="Professional cooking pot with precise temperature control for molecular gastronomy"
               fill
               priority
+              alt="Professional cooking pot with precise temperature control for molecular gastronomy"
               className="cursor-pointer object-cover"
+              src="/images/hero/cooking-pot.jpg"
               onClick={(e) =>
                 handleImageClick("/images/hero/cooking-pot.jpg", e)
               }
@@ -34,11 +38,11 @@ export function HeroBlock() {
           </div>
           <div className="relative overflow-hidden h-[150px] sm:h-[245px] lg:h-[295px]">
             <Image
-              src="/images/hero/chef-preparing.jpg"
-              alt="Chef preparing ingredients"
               fill
-              loading="lazy"
+              alt="Chef preparing ingredients"
               className="cursor-pointer object-cover"
+              loading="lazy"
+              src="/images/hero/chef-preparing.jpg"
               onClick={(e) =>
                 handleImageClick("/images/hero/chef-preparing.jpg", e)
               }
@@ -46,11 +50,11 @@ export function HeroBlock() {
           </div>
           <div className="relative overflow-hidden h-[150px] sm:h-[245px] lg:h-[295px]">
             <Image
-              src="/images/hero/eggs-preparation.jpg"
-              alt="Perfect eggs preparation"
               fill
-              loading="lazy"
+              alt="Perfect eggs preparation"
               className="cursor-pointer object-cover"
+              loading="lazy"
+              src="/images/hero/eggs-preparation.jpg"
               onClick={(e) =>
                 handleImageClick("/images/hero/eggs-preparation.jpg", e)
               }
@@ -88,11 +92,11 @@ export function HeroBlock() {
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <Image
-          src={selectedImage}
           alt="Enlarged view"
-          width={1200}
-          height={800}
           className="max-h-[80vh] w-auto rounded-lg"
+          height={800}
+          src={selectedImage}
+          width={1200}
         />
       </Modal>
     </section>
