@@ -65,6 +65,7 @@ export function CardBlock() {
                 src={card.image}
                 alt={card.title}
                 fill
+                loading="lazy"
                 className="cursor-pointer object-cover transition-transform group-hover:scale-100"
                 onClick={(e) => handleImageClick(card.image, e)}
               />

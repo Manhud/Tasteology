@@ -37,6 +37,7 @@ export function HeroBlock() {
               src="/images/hero/chef-preparing.jpg"
               alt="Chef preparing ingredients"
               fill
+              loading="lazy"
               className="cursor-pointer object-cover"
               onClick={(e) =>
                 handleImageClick("/images/hero/chef-preparing.jpg", e)
@@ -48,6 +49,7 @@ export function HeroBlock() {
               src="/images/hero/eggs-preparation.jpg"
               alt="Perfect eggs preparation"
               fill
+              loading="lazy"
               className="cursor-pointer object-cover"
               onClick={(e) =>
                 handleImageClick("/images/hero/eggs-preparation.jpg", e)
