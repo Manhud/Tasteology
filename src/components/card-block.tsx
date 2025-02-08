@@ -8,7 +8,6 @@ import { logClick } from "@/lib/utils";
 
 import { Modal } from "./ui/modal";
 
-
 interface Card {
   id: number;
   title: string;
@@ -52,7 +51,7 @@ export function CardBlock() {
   };
 
   return (
-    <section className="w-full max-w-[1146px] mx-auto px-4 md:px-0">
+    <section className="w-full max-w-[1146px] mx-auto md:px-0">
       <div className="w-fit mx-auto mb-[60px]">
         <h2 className="text-center text-3xl font-light">TASTE THE COLOURS</h2>
         <hr className="border-t border-white my-[30px]" />

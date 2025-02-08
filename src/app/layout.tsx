@@ -66,7 +66,9 @@ export default function RootLayout({
       <head>
         <link href="https://tasteology.vercel.app/" rel="canonical" />
       </head>
-      <body className={`${openSans.variable} antialiased px-8 py-[120px]`}>
+      <body
+        className={`${openSans.variable} antialiased px-8 py-8 md:py-20 md:px-20 lg:py-[160px]`}
+      >
         {children}
       </body>
     </html>

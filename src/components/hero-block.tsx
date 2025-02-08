@@ -8,7 +8,6 @@ import { logClick } from "@/lib/utils";
 
 import { Modal } from "./ui/modal";
 
-
 export function HeroBlock() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
@@ -21,7 +20,7 @@ export function HeroBlock() {
   };
 
   return (
-    <section className="mb-[120px] w-full max-w-[1146px] mx-auto px-4 md:px-0">
+    <section className="mb-[120px] w-full max-w-[1146px] mx-auto md:px-0">
       <div className="grid grid-cols-1 gap-[30px] lg:grid-cols-[minmax(auto,754px)_minmax(auto,362px)]">
         <div className="grid grid-cols-1 gap-[10px] sm:grid-cols-2 w-full">
           <div className="relative overflow-hidden h-[300px] sm:h-[400px] lg:h-[600px] sm:col-span-2 lg:col-span-1 lg:row-span-2">
