@@ -4,11 +4,7 @@ import { useEffect, useState } from "react";
 
 import { createPortal } from "react-dom";
 
-interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  children: React.ReactNode;
-}
+import type { ModalProps } from "@/types";
 
 export function Modal({ isOpen, onClose, children }: ModalProps) {
   const [mounted, setMounted] = useState(false);

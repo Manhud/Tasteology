@@ -1,8 +1,4 @@
-interface ClickableProps {
-  children: React.ReactNode;
-  className?: string;
-  href?: string;
-}
+import type { ClickableProps } from "@/types";
 
 export function Clickable({ children, className, href }: ClickableProps) {
   const Component = href ? "a" : "div";
