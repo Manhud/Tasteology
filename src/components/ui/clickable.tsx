@@ -1,12 +1,15 @@
 interface ClickableProps {
   children: React.ReactNode;
   className?: string;
+  href?: string;
 }
 
-export function Clickable({ children, className }: ClickableProps) {
+export function Clickable({ children, className, href }: ClickableProps) {
+  const Component = href ? "a" : "div";
   return (
-    <div
-      className={`cursor-pointer ${className || ""}`}
+    <Component
+      className={`${className || ""}`}
+      href={href}
       onClick={(e) => {
         const target = e.target as HTMLElement;
         console.log("Clicked element:", target);
@@ -16,6 +19,6 @@ export function Clickable({ children, className }: ClickableProps) {
       }}
     >
       {children}
-    </div>
+    </Component>
   );
 }
