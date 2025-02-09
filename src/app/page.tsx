@@ -3,7 +3,7 @@ import { HeroBlock } from "@/components/hero-block";
 
 export default function Home() {
   return (
-    <main>
+    <main className="animate-blurred-fade-in">
       <HeroBlock />
       <CardBlock />
     </main>

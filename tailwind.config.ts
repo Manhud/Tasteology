@@ -1,3 +1,5 @@
+// @ts-ignore
+import animations from '@midudev/tailwind-animations'
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -30,7 +32,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [animations],
 };
 
 export default config;

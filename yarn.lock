@@ -429,6 +429,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@midudev/tailwind-animations@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@midudev/tailwind-animations/-/tailwind-animations-0.1.0.tgz#9135bda028ebc00dac3c39cf7903767170f0928a"
+  integrity sha512-Xedqc4uNo56x8snhM5dDHvIc+hahQ2jQhciBg9PF+sET1mJJFCvzglu9vzX/KkgN1qepG4vsUcYPnxf3H7ndyw==
+
 "@next/env@15.1.6":
   version "15.1.6"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-15.1.6.tgz#2fa863d8c568a56b1c8328a86e621b8bdd4f2a20"
