@@ -1,6 +1,6 @@
 import type { CardContentProps } from "@/types";
 
-import { Clickable } from "./clickable";
+import { Clickable } from "../clickable";
 
 export const CardContent = ({ title, description }: CardContentProps) => (
   <Clickable className="p-[30px] text-center">

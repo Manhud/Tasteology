@@ -6,8 +6,8 @@ import Image from "next/image";
 
 import { cardContent } from "@/data/content";
 
-import { CardContent } from "./ui/card-content";
-import { CardImage } from "./ui/card-image";
+import { CardContent } from "./ui/card-content/card-content";
+import { CardImage } from "./ui/card-image/card-image";
 import { Clickable } from "./ui/clickable";
 import { Modal } from "./ui/modal";
 
