@@ -15,13 +15,7 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
 
   useEffect(() => {
     setMounted(true);
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
+  }, []);
 
   if (!mounted) return null;
 
