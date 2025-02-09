@@ -4,8 +4,10 @@ import { useState } from "react";
 
 import Image from "next/image";
 
+import { heroContent } from "@/data/content";
 import { logClick } from "@/lib/utils";
 
+import { Clickable } from "./ui/clickable";
 import { Modal } from "./ui/modal";
 
 export function HeroBlock() {
@@ -27,65 +29,50 @@ export function HeroBlock() {
             <Image
               fill
               priority
-              alt="Professional cooking pot with precise temperature control for molecular gastronomy"
+              alt={heroContent.images.main.alt}
               className="cursor-pointer object-cover"
-              src="/images/hero/cooking-pot.jpg"
-              onClick={(e) =>
-                handleImageClick("/images/hero/cooking-pot.jpg", e)
-              }
+              src={heroContent.images.main.src}
+              onClick={(e) => handleImageClick(heroContent.images.main.src, e)}
             />
           </div>
-          <div className="relative overflow-hidden h-[150px] sm:h-[245px] lg:h-[295px]">
-            <Image
-              fill
-              alt="Chef preparing ingredients"
-              className="cursor-pointer object-cover"
-              loading="lazy"
-              src="/images/hero/chef-preparing.jpg"
-              onClick={(e) =>
-                handleImageClick("/images/hero/chef-preparing.jpg", e)
-              }
-            />
-          </div>
-          <div className="relative overflow-hidden h-[150px] sm:h-[245px] lg:h-[295px]">
-            <Image
-              fill
-              alt="Perfect eggs preparation"
-              className="cursor-pointer object-cover"
-              loading="lazy"
-              src="/images/hero/eggs-preparation.jpg"
-              onClick={(e) =>
-                handleImageClick("/images/hero/eggs-preparation.jpg", e)
-              }
-            />
-          </div>
+          {heroContent.images.secondary.map((image, index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden h-[150px] sm:h-[245px] lg:h-[295px]"
+            >
+              <Image
+                fill
+                alt={image.alt}
+                className="cursor-pointer object-cover"
+                loading="lazy"
+                src={image.src}
+                onClick={(e) => handleImageClick(image.src, e)}
+              />
+            </div>
+          ))}
         </div>
 
         <div className="flex flex-col justify-between w-full">
           <div>
-            <h1 className="text-3xl font-light leading-[33px]">
-              WHAT DOES COOKING MEAN?
-            </h1>
-            <hr className="w-full border-t border-white my-[30px]" />
-            <p className="font-light text-white text-[21px] leading-[30px]">
-              Is it simply applying heat to a food product? A way of making
-              certain food safe to eat? Or a way to create flavour and make food
-              more appealing? This is just part of what Hervé This, the father
-              of molecular gastronomy, has dedicated his life to finding out. We
-              spoke to him to find out what his experiments have told him. And
-              in the process even discovered the secret to cooking the perfect
-              egg...
-            </p>
+            <Clickable>
+              <h1 className="text-3xl font-light leading-[33px]">
+                {heroContent.title}
+              </h1>
+              <hr className="w-full border-t border-white my-[30px]" />
+              <p className="font-light text-white text-[21px] leading-[30px]">
+                {heroContent.description}
+              </p>
+            </Clickable>
           </div>
 
-          <div className="mt-[30px]">
+          <Clickable className="mt-[30px]">
             <h3 className="mb-2 text-[15px] font-bold uppercase text-red">
-              THE PERFECT EGG
+              {heroContent.perfectEgg.title}
             </h3>
             <p className="text-[21px] font-bold text-white leading-[30px]">
-              Keep water between 67 and 68°C for a flavourful, tender yolk
+              {heroContent.perfectEgg.description}
             </p>
-          </div>
+          </Clickable>
         </div>
       </div>
 
