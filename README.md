@@ -1,5 +1,9 @@
 # Frontend Technical Test
 
+## 🌐 Live Demo
+
+Visit the live site at [tasteology.vercel.app](https://tasteology.vercel.app)
+
 This project is an implementation of a frontend technical test that demonstrates the creation of interactive and responsive components following modern web development best practices.
 
 ## 🛠 Technologies Used
