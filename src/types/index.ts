@@ -38,4 +38,16 @@ export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+}
+
+export interface CardImageProps {
+  alt: string;
+  // eslint-disable-next-line no-unused-vars
+  onImageClick: (src: string) => void;
+  src: string;
+}
+
+export interface CardContentProps {
+  title: string;
+  description: string;
 } 
